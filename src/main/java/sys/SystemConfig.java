@@ -61,8 +61,8 @@ public class SystemConfig extends JFinalConfig {
     public void afterJFinalStart() {
 
         String rep="http://www.yoyound.com/includes/ueditor/php/../../..";
-        List<Record> list= Db.find("select goods_id, goods_desc ,goods_thumb ,original_img  from ecs_goods where brand_id=7");
-        /*for (Record r:list
+        List<Record> list= Db.find("select goods_id, goods_desc ,goods_thumb ,original_img  from ecs_goods where brand_id="+PropKit.get("brand"));
+         for (Record r:list
              ) {
             getFilePath("/"+r.getStr("goods_thumb"));
             System.out.println(r.getStr("goods_id")+" "+ 0+ " /"+r.getStr("goods_thumb"));
@@ -77,15 +77,15 @@ public class SystemConfig extends JFinalConfig {
                 ) {
              getFilePath("/"+r.getStr("goods_thumb"));
            System.out.println(r.getStr("goods_id")+" "+ 2+ " "+r.getStr("original_img"));
-        }*/
+        }
         for (Record r:list
                 ) {
 
             Document containerDoc = Jsoup.parse(r.getStr("goods_desc"));
             Elements e=containerDoc.select("img");
             for(Element ee:e){
-                 //getFilePath( ee.attr("src").replaceAll(rep,""));
-               System.out.println(r.getStr("goods_id")+"            "+ee.attr("src").replaceAll(rep,""));
+                 getFilePath( ee.attr("src").replaceAll(rep,""));
+               System.out.println(r.getStr("goods_id")+" "+ 3+ " "+ee.attr("src").replaceAll(rep,""));
             }
 
         }

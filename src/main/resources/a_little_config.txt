@@ -7,4 +7,5 @@ jdbc.username=hkzh
 jdbc.password=hkzh713p@ssw0rd
 
 filepath=f:/websoft/web/xjdv5
-filetopath=f:/websoft/aa
+filetopath=f:/websoft/bm
+brand=14
