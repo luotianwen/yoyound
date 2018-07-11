@@ -1,0 +1,10 @@
+
+devMode = true
+
+
+jdbc.url=jdbc:mysql://47.95.5.235:8904/hkzh1?useUnicode=true&characterEncoding=utf-8&useSSL=false
+jdbc.username=hkzh
+jdbc.password=hkzh713p@ssw0rd
+
+filepath=f:/websoft/web/xjdv5
+filetopath=f:/websoft/aa
